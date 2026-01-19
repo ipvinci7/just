@@ -39,3 +39,4 @@ int removal(char word[100], char temp[100])
     // Return the length of the new string
     return j;
 }
+
