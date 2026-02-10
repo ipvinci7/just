@@ -43,3 +43,15 @@ int strindex(char s[],char t[])
     }
     return -1;
 }
+int get(char from[100],char to[1000])
+{
+     int i=0;
+     while(from[i]!='\0')
+     {
+          to[i] = from[i];
+          i++;
+          if(from[i]='\n')
+          to[i] = '\0';
+          i++;
+     }
+}
