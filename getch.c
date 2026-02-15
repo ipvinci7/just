@@ -12,3 +12,10 @@ int getop(char s[])
 {
     int i,c;
 }
+int getop(char s[])
+{
+    int  i,c;
+    while((s[0]=c=getch()=='' || c == '\t'))
+ ;
+}
+}
