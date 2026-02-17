@@ -21,3 +21,5 @@ int getop(char s[])
 }
 
 register int x;
+
+//register
