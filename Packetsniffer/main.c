@@ -5,7 +5,7 @@ enum protocol {
 struct Header
 {
   char version;
-  protocol
+  enum protocol proto;
 };
 struct packet
 {
