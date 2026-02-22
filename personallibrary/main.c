@@ -23,11 +23,19 @@ void showbook(struct book b)
     printf("\n Edition %s",b.edition);
     printf("\n number %d",b.number);
 }
+void addbook(struct book b,char title[60],char author[60],char edition[100],int n)
+{
+  
+   strcpy(b.title,title);
+   strcpy(b.author,author);
+   strcpy(b.edition,edition);
+   b.number =  n; 
+}
 
 int main()
 {
      struct book book1;
-     strcpy(book1.title,"Halfofyellowsun");
+     addbook(book1,"Half of a yellow sun","Chiamanda","version III",9);
     showbook(book1);
     //  addbook(book1,"Half of a yellow sun","Chimamada Adiche","version III",9);
 
