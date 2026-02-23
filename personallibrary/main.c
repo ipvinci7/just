@@ -35,8 +35,17 @@ void addbook(struct book b,char title[],char author[],char edition[],int x)
 
 int main()
 {
+    FILE *fptr;
+
+    fptr = fopen("personallib.txt","w");
+    if(fptr==NULL)
+    {
+       printf("The file is not opened");
+    }
      struct book book1;
+     
      addbook(book1,"Half of yellow sun","Chimamanda","Version II",9);
+     fputs(fptr,"hello");
     showbook(book1);
     //  addbook(book1,"Half of a yellow sun","Chimamada Adiche","version III",9);
 
