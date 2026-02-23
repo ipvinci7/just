@@ -32,7 +32,13 @@ void addbook(struct book b,char title[],char author[],char edition[],int x)
     strcpy(b.edition,edition);
     b.number =  x; 
 }
-
+//reading from the file
+// void readfile(FILE filename)
+// {
+//     FILE  file_ptr;
+//    //open file in binary read mode
+//    file_ptr = fopen(filename,"rb");
+// };
 int main()
 {
     FILE *fptr;
@@ -45,11 +51,22 @@ int main()
      struct book book1;
      
      addbook(book1,"Half of yellow sun","Chimamanda","Version II",9);
-     fputs(fptr,"hello");
+    fwrite(&book1,sizeof(book1),1,fptr);
+    fclose(fptr);
     showbook(book1);
     //  addbook(book1,"Half of a yellow sun","Chimamada Adiche","version III",9);
 
     //  printf("%s",book1.title);
+    fptr = fopen("personallib.txt","rb");
+    if(fptr==NULL)
+    {
+         printf("Error opening file");
+         return 1;
+    }
+    //Read the struct data from the file
+    fread(&book1,sizeof(book1),1,fptr);
+    fclose(fptr);
+    printf("%s %s",book1.author,book1.title);
 }
 
 
