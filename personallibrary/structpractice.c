@@ -25,6 +25,13 @@ struct student getInformation()
      return s1;
 }
 void display(struct student s);
+void display(struct  student s)
+{
+   printf("\n Displaying information\n");
+   printf("Name: %s",s.name);
+   printf("\n Age: %d",s.age);
+};
+)
 int main()
 {
    struct student s1;
