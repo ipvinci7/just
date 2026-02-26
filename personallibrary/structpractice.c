@@ -15,10 +15,21 @@ struct student
       char name[50];
       int age;
 };
+struct student getInformation()
+{
+     struct student s1;
+     printf("Enter name:");
+     scanf("%[^\n]%*c",s1.name);
+     printf("Enter age:");
+     scanf("%d",&s1.age);
+     return s1;
+}
 void display(struct student s);
 int main()
 {
    struct student s1;
+   printf("Enter name: ");
+   scanf("%[^\n]%*c",s1.name);
    struct car c = {"Tata",1021};
    print_car_info(c);
    return 0;
