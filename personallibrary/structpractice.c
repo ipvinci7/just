@@ -31,7 +31,7 @@ void display(struct  student s)
    printf("Name: %s",s.name);
    printf("\n Age: %d",s.age);
 };
-)
+
 int main()
 {
    struct student s1;
