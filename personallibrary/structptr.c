@@ -24,7 +24,9 @@ int main()
     struct Student s1;
     s1.age = 28;
     strcpy(s1.name,"Vinci");
+    s1.class ='C';
     struct Student *s1ptr = &s1;
     printf("The students age %d\n",s1ptr->age);
     printf("The students name is %s\n",s1ptr->name);
+    printf("The Student belongs to %c\n",s1ptr->class);
 }
