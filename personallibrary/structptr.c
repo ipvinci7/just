@@ -11,6 +11,11 @@ struct Student
     char class;
     int age;
 };
+struct Worker{
+     char name[50];
+     int salary;
+};
+
 int main()
 {
     struct Car car = {"Toyota",2002};
@@ -29,4 +34,11 @@ int main()
     printf("The students age %d\n",s1ptr->age);
     printf("The students name is %s\n",s1ptr->name);
     printf("The Student belongs to %c\n",s1ptr->class);
+
+    struct Worker w1;
+    w1.salary = 28;
+    strcpy(w1.name ,"Vinci");
+    struct Worker *wrkptr = &w1;
+
+    printf("Salary of the worker is %d\n",wrkptr->salary);
 }
