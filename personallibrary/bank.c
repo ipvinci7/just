@@ -3,7 +3,7 @@
 #include <stdlib.h> 
 #include <time.h>
 //should be able to open an account
-int saveacnt(char acnname[]);
+int saveacnt(char firstname,char lastname[],char email,char acn[],float bal);
 struct Account
 {
     char firstname[100];
@@ -52,12 +52,12 @@ int main()
    printf("The email address is  %s\n",a2.emailaddress);
    printf("The account number is %s\n",a2.acntno);
    printf("The balance is %f\n",a2.bal);
-   saveacnt(a2.firstname);
+   saveacnt(a2.firstname,a2.lastname,a2.emailaddress,a2.acntno,a2.bal);
 
 }
 //look for the account if it exist 
 
-int saveacnt(char acntname[])
+int saveacnt(char firstname,char lastname[],char email,char acn[],float bal)
 {
     FILE *filepointer; // Declare a file pointer
     //open a file name
@@ -71,7 +71,13 @@ int saveacnt(char acntname[])
 }
      if(filepointer!=NULL)
      {
-        fprintf(filepointer,"Bank Account name %s",acntname);
+        
+        //fprintf(filepointer,"Bank Account name %s",acntname);
+        fprintf(filepointer,"First name %s",firstname);
+        fprintf(filepointer,"Last name %s",lastname);
+        fprintf(filepointer,"Email %s",email);
+        fprintf(filepointer,"Account number %s",acn);
+        fprintf(filepointer,"Balance %f",bal);
          fclose(filepointer);
      }
      //Write content to the file
