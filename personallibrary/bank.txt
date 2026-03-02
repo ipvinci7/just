@@ -1,1 +1,5 @@
-Bank Account name Vinci
+First name Vinci
+Last name Kuti
+Email kutivinci@gmail.com
+Account number 1548119422
+Balance 0.000000
