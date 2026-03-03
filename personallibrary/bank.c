@@ -83,3 +83,15 @@ int saveacnt(char firstname[],char lastname[],char email[],char acn[],float bal)
      //Write content to the file
     return 0;
 }
+int rindacnt(int id)
+{
+     FILE *ptr;
+     ptr = fopen('bank.txt','r');
+     if(ptr==NULL)
+     {
+        perror("File didnt open");
+        return 1;
+     }
+     //open binary file and convert 
+     //
+}
