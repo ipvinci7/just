@@ -74,10 +74,10 @@ int saveacnt(char firstname[],char lastname[],char email[],char acn[],float bal)
         
         //fprintf(filepointer,"Bank Account name %s",acntname);
         fprintf(filepointer,"First name %s",firstname);
-        fprintf(filepointer,"\nLast name %s",lastname);
-        fprintf(filepointer,"\nEmail %s",email);
-        fprintf(filepointer,"\nAccount number %s",acn);
-        fprintf(filepointer,"\nBalance %f",bal);
+        fprintf(filepointer,"\tLast name %s",lastname);
+        fprintf(filepointer,"\tEmail %s",email);
+        fprintf(filepointer,"\tAccount number %s",acn);
+        fprintf(filepointer,"\tBalance %f",bal);
          fclose(filepointer);
      }
      //Write content to the file
@@ -86,7 +86,8 @@ int saveacnt(char firstname[],char lastname[],char email[],char acn[],float bal)
 int rindacnt(int id)
 {
      FILE *ptr;
-     ptr = fopen('bank.txt','r');
+     int s;
+     ptr = fopen("bank.txt","r");
      if(ptr==NULL)
      {
         perror("File didnt open");
@@ -94,4 +95,10 @@ int rindacnt(int id)
      }
      //open binary file and convert 
      //
+    while((s=fgetc(ptr))!=EOF)
+    {
+         printf("%c",s);
+    }
+    fclose(ptr);
+    return 0;
 }
