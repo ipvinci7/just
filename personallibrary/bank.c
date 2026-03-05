@@ -102,3 +102,18 @@ int rindacnt(int id)
     fclose(ptr);
     return 0;
 }
+int getline(char word[])
+{
+    char des[100];
+    int i = 0;
+    int j =0;
+    while(word[i]!='\0')
+    {
+         i++;
+         des[j++] = word[i++];
+         if(word[i]!='\n')
+         {
+  
+         }
+    }
+}
