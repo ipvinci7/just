@@ -102,18 +102,22 @@ int rindacnt(int id)
     fclose(ptr);
     return 0;
 }
-int getline(char word[])
+//find a word
+
+int find(char full[],char word[])
 {
-    char des[100];
-    int i = 0;
-    int j =0;
-    while(word[i]!='\0')
+    int len1 = strlen(full);
+    int len2 = strlen(word);
+    int test = 0;
+    for(int i = 0;i<len1+1;i++)
     {
-         i++;
-         des[j++] = word[i++];
-         if(word[i]!='\n')
+         if(word[i]==full[i])
          {
-  
+            test++;
          }
+    }
+    if(test==len2)
+    {
+        printf("The words are same length");
     }
 }
