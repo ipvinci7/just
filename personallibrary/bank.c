@@ -2,6 +2,7 @@
 #include <string.h>
 #include <stdlib.h> 
 #include <time.h>
+#include <util.h>
 //should be able to open an account
 int saveacnt(char firstname[],char lastname[],char email[],char acn[],float bal);
 struct Account
@@ -103,21 +104,3 @@ int rindacnt(int id)
     return 0;
 }
 //find a word
-
-int find(char full[],char word[])
-{
-    int len1 = strlen(full);
-    int len2 = strlen(word);
-    int test = 0;
-    for(int i = 0;i<len1+1;i++)
-    {
-         if(word[i]==full[i])
-         {
-            test++;
-         }
-    }
-    if(test==len2)
-    {
-        printf("The words are same length");
-    }
-}
