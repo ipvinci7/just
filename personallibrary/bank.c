@@ -2,7 +2,7 @@
 #include <string.h>
 #include <stdlib.h> 
 #include <time.h>
-#include <util.h>
+#include "util.h"
 //should be able to open an account
 int saveacnt(char firstname[],char lastname[],char email[],char acn[],float bal);
 struct Account
@@ -61,6 +61,8 @@ int main()
 int saveacnt(char firstname[],char lastname[],char email[],char acn[],float bal)
 {
     FILE *filepointer; // Declare a file pointer
+    int id;
+    id = rand();
     //open a file name
     filepointer = fopen("bank.txt","w");
 
