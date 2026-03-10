@@ -14,19 +14,7 @@ struct Account
     float bal;
     int id;
 };
-// struct Student
-// {
-//     int id;
-//     float grade;
-// };
-// struct Student createStudent(int id_val,float grade_val);
-// struct Student createStudent(int id_val,float grade_val)
-// {
-//     struct Student s;
-//     s.id = id_val;
-//     s.grade=grade_val;
-//     return s;
-// }
+
 struct Account createacnt(char firstname[],char lastname[],char email[])
 {
    
