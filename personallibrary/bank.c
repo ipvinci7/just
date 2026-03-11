@@ -94,3 +94,7 @@ int rindacnt(int id)
     return 0;
 }
 //find a word
+int findbyid()
+{
+    
+}
