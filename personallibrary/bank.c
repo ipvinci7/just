@@ -96,5 +96,7 @@ int rindacnt(int id)
 //find a word
 int findbyid()
 {
-    
+    FILE *ptr;
+    int s;
+    ptr = fopen("bank.txt","r");
 }
