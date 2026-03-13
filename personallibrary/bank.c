@@ -44,14 +44,14 @@ int main()
    saveacnt(a2.firstname,a2.lastname,a2.emailaddress,a2.acntno,a2.bal);
 
 }
-//look for the account if it exist 
+
 
 int saveacnt(char firstname[],char lastname[],char email[],char acn[],float bal)
 {
     FILE *filepointer; // Declare a file pointer
     int id;
     id = rand();
-    //open a file name
+   
     filepointer = fopen("bank.txt","w");
 
     //error checker check if the file is open
