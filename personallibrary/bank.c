@@ -99,6 +99,15 @@ int findbyid()
     FILE *ptr;
     int s;
     ptr = fopen("bank.txt","r");
+    if(ptr==NULL)
+    {
+        perror("File didnt open");
+        return 1;
+    }
+    while((s=fgetc(ptr))!=EOF)
+    {
+         //can i get the size of the id and search
+    }
 }
 void squeeze(char s[],int c)
 {
