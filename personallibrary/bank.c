@@ -88,7 +88,19 @@ int rindacnt(int id)
      //
     while((s=fgetc(ptr))!=EOF)
     {
-         printf("%c",s);
+         char id[4];
+         
+         while(id[i]!='\0')
+         {
+
+         }
+         for(int i=0;i<4;i++)
+         {
+             while(id[i]!='\0')
+             {
+                
+             }
+         }
     }
     fclose(ptr);
     return 0;
@@ -108,6 +120,8 @@ int findbyid()
     {
          //can i get the size of the id and search
     }
+    char id[4];
+    
 }
 void squeeze(char s[],int c)
 {
