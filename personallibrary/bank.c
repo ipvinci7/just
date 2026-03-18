@@ -118,7 +118,10 @@ int findbyid()
     }
     while((s=fgetc(ptr))!=EOF)
     {
-         //can i get the size of the id and search
+        if(s=id[i])
+        {
+            
+        }
     }
     char id[4];
     
