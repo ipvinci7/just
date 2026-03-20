@@ -15,3 +15,6 @@ int main()
 //iterate the char id and return true if the id fits
 
 int find(char word[],)
+{
+    
+}
