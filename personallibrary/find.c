@@ -16,7 +16,8 @@ int main()
 
 int find(char word[],char find[]
 {
-    for(int i=0;i<10;i++){
-        
-    }
+   while(word[i]!='\0')
+   {
+
+   }  
 }
